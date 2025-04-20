@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Foodie Journal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Foodie Journal</h1>
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/i1.png" data-full="images/tacos.png" alt="Delicious Burger" onclick="openModal(this)" />
+        <div class="card-content">
+          <h3>Tacos: Mexico 🇲🇽</h3>
+          <p>Soft or crispy tortillas filled with spicy meats, veggies, and toppings — a Mexican street food favorite.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/i2.png" data-full="images/pizza.png" alt="Spicy Tacos" onclick="openModal(this)" />
+        <div class="card-content">
+          <h3>Pizza: Italy 🇮🇹</h3>
+          <p>Classic Italian dish with a crispy base, rich tomato sauce, and gooey cheese — endless topping choices!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/i3.png" data-full="images/litti.png" alt="Fresh Salad" onclick="openModal(this)" />
+        <div class="card-content">
+          <h3>Litti Chokha: India 🇮🇳</h3>
+          <p>A traditional dish from Bihar, with roasted wheat balls (litti) served with mashed vegetables (chokha).</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/i4.png" data-full="images/hummus.png" alt="Gourmet Pizza" onclick="openModal(this)" />
+        <div class="card-content">
+          <h3>Hummus & Pita: Lebanon 🇱🇧</h3>
+          <p>Smooth chickpea and tahini dip served with warm, soft pita bread — a staple of Levantine cuisine.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/i5.png" data-full="images/crossiant.png" alt="Creamy Pasta" onclick="openModal(this)" />
+        <div class="card-content">
+          <h3>Croissant: France 🇫🇷</h3>
+          <p>Flaky, buttery pastry with layers of delight — perfect with coffee and straight from the streets of Paris.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/i6.png" data-full="images/baklava.png" alt="Exotic Sushi" onclick="openModal(this)" />
+        <div class="card-content">
+          <h3>Baklava: Turkey 🇹🇷</h3>
+          <p>Sweet dessert made of layers of filo pastry, nuts, and honey syrup — crunchy and heavenly.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/i7.png" data-full="images/kimchi.png" alt="Sweet Cupcake" onclick="openModal(this)" />
+        <div class="card-content">
+          <h3>Kimchi: Korea 🇰🇷</h3>
+          <p>Fermented cabbage with chili, garlic, and spices — a tangy, spicy Korean side dish loved worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "flex";
+      modalImg.src = img.getAttribute("data-full");
+      modalImg.alt = img.alt;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
