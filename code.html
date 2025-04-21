@@ -13,22 +13,78 @@
             padding: 10px;
             border-radius: 5px;
             overflow-x: auto;
+            /* Ensures long lines don't break layout */
+            max-height: 400px;
+            /* Optional: Limit height and add scroll */
+            overflow-y: auto;
+            /* Optional: Add vertical scroll if max-height is set */
         }
 
         code {
             font-family: monospace;
+            white-space: pre;
+            /* Preserve whitespace and line breaks */
         }
 
         .collapsible-content {
             display: none;
+            /* Initially hidden */
         }
 
         .collapsible-button {
-            background-color: #4CAF50; /* Green */
+            background-color: #4CAF50;
+            /* Green */
             border: none;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 16px;
+            /* Slightly smaller padding */
             text-align: center;
+            cursor: pointer;
+            /* Add pointer cursor */
+            border-radius: 4px;
+            /* Add border radius */
+            margin-left: 10px;
+            /* Space between heading and button */
+            font-size: 0.9em;
+            /* Slightly smaller font */
+            vertical-align: middle;
+            /* Align with heading */
+        }
+
+        .collapsible-button:hover {
+            background-color: #45a049;
+            /* Darker green on hover */
+        }
+
+        h1 {
+            display: inline-block;
+            /* Keep heading and button on same line */
+            margin-right: 5px;
+            /* Small space after heading */
+            vertical-align: middle;
+            /* Align with button */
+        }
+
+        /* Ensure content div handles inline-block h1 correctly */
+        .content {
+            /* Existing styles */
+            padding-bottom: 20px;
+            /* Add padding at the bottom */
+        }
+
+        /* Style for each code block section */
+        .code-section {
+            margin-bottom: 20px;
+            /* Space between code blocks */
+            border-bottom: 1px solid #eee;
+            /* Separator line */
+            padding-bottom: 20px;
+            /* Padding below the pre tag */
+        }
+
+        .code-section:last-child {
+            border-bottom: none;
+            /* No border for the last section */
         }
     </style>
 </head>
@@ -48,94 +104,578 @@
         </ul>
     </nav>
 
-    <div class="content">
-        <h1>HTML Code</h1><button class="collapsible-button" onclick="toggleCode(this)">Show Code</button>
-        <pre><code class="language-html collapsible-content">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Image Grid Collage&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    <div class="container">
 
-&lt;div style="display: flex; flex-wrap: wrap; width: 100%;"&gt;
-    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
-        &lt;img src="images/c1.jpg" alt="Image 1" style="width: 100%; height: auto;"&gt;
-        &lt;p style="text-align: center;"&gt;Caption for Image 1&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
-        &lt;img src="images/c2.jpg" alt="Image 2" style="width: 100%; height: auto;"&gt;
-        &lt;p style="text-align: center;"&gt;Caption for Image 2&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
-        &lt;img src="images/c3.jpg" alt="Image 3" style="width: 100%; height: auto;"&gt;
-        &lt;p style="text-align: center;"&gt;Caption for Image 3&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
-        &lt;img src="images/c4.jpg" alt="Image 4" style="width: 100%; height: auto;"&gt;
-        &lt;p style="text-align: center;"&gt;Caption for Image 4&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
-        &lt;img src="images/c5.jpg" alt="Image 5" style="width: 100%; height: auto;"&gt;
-        &lt;p style="text-align: center;"&gt;Caption for Image 5&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
-        &lt;img src="images/c6.jpg" alt="Image 6" style="width: 100%; height: auto;"&gt;
-        &lt;p style="text-align: center;"&gt;Caption for Image 6&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
-        &lt;img src="images/c7.jpg" alt="Image 7" style="width: 100%; height: auto;"&gt;
-        &lt;p style="text-align: center;"&gt;Caption for Image 7&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+        <h1 class="codeh1">Code Snippets</h1>
+        <div class="content">
 
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+            <!-- NEW CODE BLOCK: index.html -->
+            <div class="code-section">
+                <h1>index.html</h1><button class="collapsible-button" onclick="toggleCode(this)">Show Code</button>
+                <pre><code class="collapsible-content">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                
+                &lt;head&gt;
+                  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+                  &lt;title&gt;Crave syndrome&lt;/title&gt;
+                  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+                &lt;/head&gt;
+                
+                &lt;body&gt;
+                
+                  &lt;nav class=&quot;navbar&quot;&gt;
+                    &lt;div class=&quot;menu-toggle&quot; onclick=&quot;toggleMenu()&quot;&gt;
+                      &lt;span&gt;&lt;/span&gt;
+                      &lt;span&gt;&lt;/span&gt;
+                      &lt;span&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;ul class=&quot;nav-links&quot; id=&quot;navLinks&quot;&gt;
+                      &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Food Journal&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;PhotoGraphicEssay.html&quot;&gt;Photographic Essay&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;documentary.html&quot;&gt;Documentary&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;code.html&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/nav&gt;
+                
+                  &lt;div class=&quot;container&quot;&gt;
+                    &lt;h1&gt;Food Journal&lt;/h1&gt;
+                    &lt;div class=&quot;card-grid&quot;&gt;
+                      &lt;div class=&quot;card&quot;&gt;
+                        &lt;img src=&quot;images/i1.png&quot; data-full=&quot;images/tacos.png&quot; alt=&quot;Delicious Burger&quot; onclick=&quot;openModal(this)&quot; /&gt;
+                        &lt;div class=&quot;card-content&quot;&gt;
+                          &lt;h3&gt;Tacos: Mexico 🇲🇽&lt;/h3&gt;
+                          &lt;p&gt;Soft or crispy tortillas filled with spicy meats, veggies, and toppings &mdash; a Mexican street food favorite.&lt;/p&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                
+                      &lt;div class=&quot;card&quot;&gt;
+                        &lt;img src=&quot;images/i2.png&quot; data-full=&quot;images/pizza.png&quot; alt=&quot;Spicy Tacos&quot; onclick=&quot;openModal(this)&quot; /&gt;
+                        &lt;div class=&quot;card-content&quot;&gt;
+                          &lt;h3&gt;Pizza: Italy 🇮🇹&lt;/h3&gt;
+                          &lt;p&gt;Classic Italian dish with a crispy base, rich tomato sauce, and gooey cheese &mdash; endless topping choices!&lt;/p&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                
+                      &lt;div class=&quot;card&quot;&gt;
+                        &lt;img src=&quot;images/i3.png&quot; data-full=&quot;images/litti.png&quot; alt=&quot;Fresh Salad&quot; onclick=&quot;openModal(this)&quot; /&gt;
+                        &lt;div class=&quot;card-content&quot;&gt;
+                          &lt;h3&gt;Litti Chokha: India 🇮🇳&lt;/h3&gt;
+                          &lt;p&gt;A traditional dish from Bihar, with roasted wheat balls (litti) served with mashed vegetables (chokha).&lt;/p&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                
+                      &lt;div class=&quot;card&quot;&gt;
+                        &lt;img src=&quot;images/i4.png&quot; data-full=&quot;images/hummus.png&quot; alt=&quot;Gourmet Pizza&quot; onclick=&quot;openModal(this)&quot; /&gt;
+                        &lt;div class=&quot;card-content&quot;&gt;
+                          &lt;h3&gt;Hummus &amp; Pita: Lebanon 🇱🇧&lt;/h3&gt;
+                          &lt;p&gt;Smooth chickpea and tahini dip served with warm, soft pita bread &mdash; a staple of Levantine cuisine.&lt;/p&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                
+                      &lt;div class=&quot;card&quot;&gt;
+                        &lt;img src=&quot;images/i5.png&quot; data-full=&quot;images/crossiant.png&quot; alt=&quot;Creamy Pasta&quot; onclick=&quot;openModal(this)&quot; /&gt;
+                        &lt;div class=&quot;card-content&quot;&gt;
+                          &lt;h3&gt;Croissant: France 🇫🇷&lt;/h3&gt;
+                          &lt;p&gt;Flaky, buttery pastry with layers of delight &mdash; perfect with coffee and straight from the streets of Paris.&lt;/p&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                
+                      &lt;div class=&quot;card&quot;&gt;
+                        &lt;img src=&quot;images/i6.png&quot; data-full=&quot;images/baklava.png&quot; alt=&quot;Exotic Sushi&quot; onclick=&quot;openModal(this)&quot; /&gt;
+                        &lt;div class=&quot;card-content&quot;&gt;
+                          &lt;h3&gt;Baklava: Turkey 🇹🇷&lt;/h3&gt;
+                          &lt;p&gt;Sweet dessert made of layers of filo pastry, nuts, and honey syrup &mdash; crunchy and heavenly.&lt;/p&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                
+                      &lt;div class=&quot;card&quot;&gt;
+                        &lt;img src=&quot;images/i7.png&quot; data-full=&quot;images/kimchi.png&quot; alt=&quot;Sweet Cupcake&quot; onclick=&quot;openModal(this)&quot; /&gt;
+                        &lt;div class=&quot;card-content&quot;&gt;
+                          &lt;h3&gt;Kimchi: Korea 🇰🇷&lt;/h3&gt;
+                          &lt;p&gt;Fermented cabbage with chili, garlic, and spices &mdash; a tangy, spicy Korean side dish loved worldwide.&lt;/p&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                
+                  &lt;!-- Modal --&gt;
+                  &lt;div id=&quot;imageModal&quot; class=&quot;modal&quot;&gt;
+                    &lt;span class=&quot;close&quot; onclick=&quot;closeModal()&quot;&gt;&amp;times;&lt;/span&gt;
+                    &lt;img class=&quot;modal-content&quot; id=&quot;modalImage&quot; /&gt;
+                  &lt;/div&gt;
+                
+                  &lt;footer class=&quot;footer&quot;&gt;
+                    Crafted with ❤️ by &lt;strong&gt;Nimishka&lt;/strong&gt;, &lt;strong&gt;Michael&lt;/strong&gt;, and &lt;strong&gt;Sam&lt;/strong&gt;
+                  &lt;/footer&gt;
+                
+                  &lt;script&gt;
+                    function openModal(img) {
+                      const modal = document.getElementById(&quot;imageModal&quot;);
+                      const modalImg = document.getElementById(&quot;modalImage&quot;);
+                      modal.style.display = &quot;flex&quot;;
+                      modalImg.src = img.getAttribute(&quot;data-full&quot;);
+                      modalImg.alt = img.alt;
+                    }
+                
+                    function closeModal() {
+                      document.getElementById(&quot;imageModal&quot;).style.display = &quot;none&quot;;
+                    }
+                
+                    function toggleMenu() {
+                      document.getElementById(&quot;navLinks&quot;).classList.toggle(&quot;active&quot;);
+                    }
+                  &lt;/script&gt;
+                &lt;/body&gt;
+                
+                &lt;/html&gt;
+</code></pre>
+            </div>
 
-        <h1>CSS Code</h1><button class="collapsible-button" onclick="toggleCode(this)">Show Code</button>
-        <pre><code class="language-css collapsible-content">/* Add your CSS code here */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
+            <!-- NEW CODE BLOCK: documentary.html -->
+            <div class="code-section">
+                <h1>documentary.html</h1><button class="collapsible-button" onclick="toggleCode(this)">Show
+                    Code</button>
+                <pre><code class="collapsible-content">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                
+                &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                    &lt;title&gt;Documentary&lt;/title&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+                &lt;/head&gt;
+                
+                &lt;style&gt;
+                    body {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 0;
+                        height: 100vh;
+                    }
+                
+                    #loading-screen {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 24px;
+                        color: white;
+                        z-index: 1000;
+                        animation: hideLoader 0s ease-in-out 10s forwards;
+                    }
+                
+                    @keyframes hideLoader {
+                        to {
+                            display: none;
+                        }
+                    }
+                
+                    .video-container {
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        background-color: #000;
+                        /* Optional: Add a black background */
+                        margin: 0;
+                    }
+                
+                    .video-container video {
+                        max-width: 100%;
+                        max-height: 100%;
+                        border: 2px solid #fff;
+                        /* Optional: Add a border around the video */
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                        /* Optional: Add a shadow for better aesthetics */
+                    }
+                &lt;/style&gt;
+                
+                &lt;body&gt;
+                
+                    &lt;nav class=&quot;navbar&quot;&gt;
+                        &lt;div class=&quot;menu-toggle&quot; onclick=&quot;toggleMenu()&quot;&gt;
+                            &lt;span&gt;&lt;/span&gt;
+                            &lt;span&gt;&lt;/span&gt;
+                            &lt;span&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;ul class=&quot;nav-links&quot; id=&quot;navLinks&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Food Journal&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;PhotoGraphicEssay.html&quot;&gt;Photographic Essay&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;documentary.html&quot;&gt;Documentary&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;code.html&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                
+                
+                    &lt;div id=&quot;loading-screen&quot;&gt;Loading video, please wait...&lt;/div&gt;
+                    &lt;div style=&quot;display: flex; justify-content: center; align-items: center; height: 100%;&quot;&gt;
+                        &lt;div style=&quot;width: 100%; max-width: 800px;&quot;&gt;
+                            &lt;iframe width=&quot;100%&quot; height=&quot;auto&quot;
+                                src=&quot;https://drive.google.com/file/d/1v9osIo5qLUCKC6rs9jLLYW0hZb9A8-_v/preview&quot; frameborder=&quot;0&quot;
+                                allowfullscreen style=&quot;aspect-ratio: 16/9;&quot;&gt;
+                            &lt;/iframe&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                
+                
+                    &lt;footer class=&quot;footer&quot;&gt;
+                        Crafted with ❤️ by &lt;strong&gt;Nimishka&lt;/strong&gt;, &lt;strong&gt;Michael&lt;/strong&gt;, and &lt;strong&gt;Sam&lt;/strong&gt;
+                    &lt;/footer&gt;
+                
+                    &lt;script&gt;
+                        function toggleMenu() {
+                            document.getElementById(&quot;navLinks&quot;).classList.toggle(&quot;active&quot;);
+                        }
+                    &lt;/script&gt;
+                
+                    &lt;script&gt;
+                        const video = document.querySelector('iframe');
+                        const loader = document.getElementById('loading-screen');
+                
+                        video.onload = () =&gt; {
+                            loader.style.display = 'none';
+                        };
+                    &lt;/script&gt;
+                
+                &lt;/body&gt;
+                
+                &lt;/html&gt;
+</code></pre>
+            </div>
 
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
+            <!-- NEW CODE BLOCK: PhotoGraphicEssay.html -->
+            <div class="code-section">
+                <h1>PhotoGraphicEssay.html</h1><button class="collapsible-button" onclick="toggleCode(this)">Show
+                    Code</button>
+                <pre><code class="collapsible-content">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                
+                &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                    &lt;title&gt;Photographic Essay&lt;/title&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+                &lt;/head&gt;
+                
+                &lt;body&gt;
+                
+                    &lt;nav class=&quot;navbar&quot;&gt;
+                        &lt;div class=&quot;menu-toggle&quot; onclick=&quot;toggleMenu()&quot;&gt;
+                            &lt;span&gt;&lt;/span&gt;
+                            &lt;span&gt;&lt;/span&gt;
+                            &lt;span&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;ul class=&quot;nav-links&quot; id=&quot;navLinks&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Food Journal&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;PhotoGraphicEssay.html&quot;&gt;Photographic Essay&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;documentary.html&quot;&gt;Documentary&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;code.html&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                
+                    &lt;div class=&quot;container&quot;&gt;
+                
+                        &lt;h1&gt;Photographic Essay&lt;/h1&gt;
+                
+                        &lt;div style=&quot;display: flex; flex-wrap: wrap; width: 100%; justify-content: center;&quot;&gt;
+                            &lt;div style=&quot;width: 100%; max-width: 300px; padding: 20px; box-sizing: border-box;&quot;&gt;
+                                &lt;img src=&quot;images/c1.jpg&quot; alt=&quot;Image 1&quot; style=&quot;width: 100%; height: auto; border: 2px solid grey;&quot;&gt;
+                                &lt;p
+                                    style=&quot;text-align: center; border-radius: 50%; padding: 10px; border: 2px solid #ccc; display: inline-block; word-wrap: break-word; width: 80%;&quot;&gt;
+                                    Caption for Image 1&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div style=&quot;width: 100%; max-width: 300px; padding: 20px; box-sizing: border-box;&quot;&gt;
+                                &lt;img src=&quot;images/c2.jpg&quot; alt=&quot;Image 2&quot; style=&quot;width: 100%; height: auto; border: 2px solid grey;&quot;&gt;
+                                &lt;p
+                                    style=&quot;text-align: center; border-radius: 50%; padding: 10px; border: 2px solid #ccc; display: inline-block; word-wrap: break-word; width: 80%;&quot;&gt;
+                                    Caption for Image 2&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div style=&quot;width: 100%; max-width: 300px; padding: 20px; box-sizing: border-box;&quot;&gt;
+                                &lt;img src=&quot;images/c3.jpg&quot; alt=&quot;Image 3&quot; style=&quot;width: 100%; height: auto; border: 2px solid grey;&quot;&gt;
+                                &lt;p
+                                    style=&quot;text-align: center; border-radius: 50%; padding: 10px; border: 2px solid #ccc; display: inline-block; word-wrap: break-word; width: 80%;&quot;&gt;
+                                    Caption for Image 3&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div style=&quot;width: 100%; max-width: 300px; padding: 20px; box-sizing: border-box;&quot;&gt;
+                                &lt;img src=&quot;images/c4.jpg&quot; alt=&quot;Image 4&quot; style=&quot;width: 100%; height: auto; border: 2px solid grey;&quot;&gt;
+                                &lt;p
+                                    style=&quot;text-align: center; border-radius: 50%; padding: 10px; border: 2px solid #ccc; display: inline-block; word-wrap: break-word; width: 80%;&quot;&gt;
+                                    Caption for Image 4&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div style=&quot;width: 100%; max-width: 300px; padding: 20px; box-sizing: border-box;&quot;&gt;
+                                &lt;img src=&quot;images/c5.jpg&quot; alt=&quot;Image 5&quot; style=&quot;width: 100%; height: auto; border: 2px solid grey;&quot;&gt;
+                                &lt;p
+                                    style=&quot;text-align: center; border-radius: 50%; padding: 10px; border: 2px solid #ccc; display: inline-block; word-wrap: break-word; width: 80%;&quot;&gt;
+                                    Caption for Image 5&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div style=&quot;width: 100%; max-width: 300px; padding: 20px; box-sizing: border-box;&quot;&gt;
+                                &lt;img src=&quot;images/c6.jpg&quot; alt=&quot;Image 6&quot; style=&quot;width: 100%; height: auto; border: 2px solid grey;&quot;&gt;
+                                &lt;p
+                                    style=&quot;text-align: center; border-radius: 50%; padding: 10px; border: 2px solid #ccc; display: inline-block; word-wrap: break-word; width: 80%;&quot;&gt;
+                                    Caption for Image 6&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                
+                
+                    &lt;footer class=&quot;footer&quot;&gt;
+                        Crafted with ❤️ by &lt;strong&gt;Nimishka&lt;/strong&gt;, &lt;strong&gt;Michael&lt;/strong&gt;, and &lt;strong&gt;Sam&lt;/strong&gt;
+                    &lt;/footer&gt;
+                
+                    &lt;script&gt;
+                        function toggleMenu() {
+                            document.getElementById(&quot;navLinks&quot;).classList.toggle(&quot;active&quot;);
+                        }
+                    &lt;/script&gt;
+                
+                &lt;/body&gt;
+                
+                &lt;/html&gt;
+</code></pre>
+            </div>
 
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-}
+            <!-- NEW CODE BLOCK: styles.css -->
+            <div class="code-section">
+                <h1>styles.css</h1><button class="collapsible-button" onclick="toggleCode(this)">Show Code</button>
+                <pre><code class="collapsible-content">
+                body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-image: url('images/f1.png');
+                background-size: cover;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: rgba(255, 255, 255, 0.7);
+                position: relative;
+              }
+              
+              body::before {
+                content: &quot;&quot;;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('images/f1.png');
+                background-size: cover;
+                background-position: center;
+                opacity: 0.2;
+                z-index: -1;
+              }
+              
+              * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+              }
+              
+              
+              body {
+                font-family: Arial, sans-serif;
+                background: #f9f9f9;
+                color: #333;
+              }
+              
+              .container {
+                max-width: 1200px;
+                margin: auto;
+                padding: 20px;
+              }
+              
+              h1 {
+                text-align: center;
+                margin-bottom: 30px;
+                color: #865c09;
+              }
+              
+              .card-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+              }
+              
+              .card {
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s;
+                cursor: pointer;
+              }
+              
+              .card:hover {
+                transform: translateY(-5px);
+              }
+              
+              .card img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                display: block;
+              }
+              
+              .card-content {
+                padding: 15px;
+              }
+              
+              .card-content h3 {
+                margin-bottom: 5px;
+                font-size: 1.1rem;
+                color: #222;
+              }
+              
+              .card-content p {
+                font-size: 0.95rem;
+                color: #555;
+              }
+              
+              /* Navbar Styles */
+              .navbar {
+                background-color: #333;
+                padding: 10px 20px;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+              
+              .menu-toggle {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+              }
+              
+              .menu-toggle span {
+                width: 25px;
+                height: 3px;
+                background: #fff;
+                margin: 4px 0;
+                transition: 0.3s;
+              }
+              
+              .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 15px;
+              }
+              
+              .nav-links li a {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                padding: 5px 10px;
+                transition: background 0.3s;
+              }
+              
+              .nav-links li a:hover {
+                background: #555;
+                border-radius: 4px;
+              }
+              
+              @media (max-width: 768px) {
+                .menu-toggle {
+                  display: flex;
+                }
+              
+                .nav-links {
+                  position: absolute;
+                  top: 60px;
+                  left: 0;
+                  right: 0;
+                  background: #333;
+                  flex-direction: column;
+                  display: none;
+                  padding: 10px 0;
+                }
+              
+                .nav-links.active {
+                  display: flex;
+                }
+              
+                .nav-links li a {
+                  padding: 10px;
+                  font-size: 1.1rem;
+                }
+              }
+              
+              /* Modal Styles */
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                padding: 20px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.8);
+                align-items: center;
+                justify-content: center;
+              }
+              
+              .modal-content {
+                max-width: 90%;
+                max-height: 80%;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+              }
+              
+              .close {
+                position: absolute;
+                top: 30px;
+                right: 40px;
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 1001;
+              }
+              
+              /* Responsive for smaller devices */
+              @media (max-width: 600px) {
+                .modal-content {
+                  width: 95%;
+                  height: auto;
+                }
+              
+                .close {
+                  top: 15px;
+                  right: 20px;
+                  font-size: 30px;
+                }
+              }
+              
+              /* Footer Styles */
+              .footer {
+                background-color: #222;
+                color: #fff;
+                text-align: center;
+                padding: 15px 10px;
+                margin-top: 40px;
+                font-size: 1rem;
+              }
+              
+              .footer strong {
+                color: #ffd700;
+              }
+</code></pre>
+            </div>
 
-.navbar a:hover {
-    background-color: #555;
-}
-
-.content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Add more CSS as needed */</code></pre>
+        </div> <!-- End of content div -->
     </div>
 
     <script>
@@ -144,14 +684,34 @@ h1 {
         }
 
         function toggleCode(button) {
-            var pre = button.nextElementSibling;
-            var code = pre.querySelector('.collapsible-content');
-            code.style.display = code.style.display === "block" ? "none" : "block";
-            button.textContent = code.style.display === "block" ? "Hide Code" : "Show Code";
+            // Find the <pre> element that is the next sibling of the button's parent div
+            // This assumes the structure: div.code-section > h1 + button + pre > code
+            var heading = button.previousElementSibling; // Get the h1
+            var pre = button.nextElementSibling; // Get the pre tag
+
+            if (pre && pre.tagName === 'PRE') {
+                var code = pre.querySelector('.collapsible-content');
+                if (code) {
+                    code.style.display = code.style.display === "block" ? "none" : "block";
+                    button.textContent = code.style.display === "block" ? "Hide Code" : "Show Code";
+                } else {
+                    console.error("Could not find .collapsible-content inside the <pre> tag.");
+                }
+            } else {
+                console.error("Could not find the <pre> tag immediately following the button.");
+            }
         }
 
-        // Initially hide all code blocks
-        document.querySelectorAll('.collapsible-content').forEach(code => code.style.display = 'none');
+        // Initially hide all code blocks when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.collapsible-content').forEach(code => {
+                code.style.display = 'none';
+            });
+            // Ensure all buttons initially say "Show Code"
+            document.querySelectorAll('.collapsible-button').forEach(button => {
+                button.textContent = 'Show Code';
+            });
+        });
     </script>
 </body>
 
