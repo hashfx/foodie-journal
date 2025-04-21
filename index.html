@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Foodie Journal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crave syndrome</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Food Journal</a></li>
+      <li><a href="PhotoGraphicEssay.html">Photographic Essay</a></li>
+      <li><a href="documentary.html">Documentary</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="code.html">Code</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
     <h1>Foodie Journal</h1>
     <div class="card-grid">
@@ -14,7 +32,8 @@
         <img src="images/i1.png" data-full="images/tacos.png" alt="Delicious Burger" onclick="openModal(this)" />
         <div class="card-content">
           <h3>Tacos: Mexico 🇲🇽</h3>
-          <p>Soft or crispy tortillas filled with spicy meats, veggies, and toppings — a Mexican street food favorite.</p>
+          <p>Soft or crispy tortillas filled with spicy meats, veggies, and toppings — a Mexican street food favorite.
+          </p>
         </div>
       </div>
 
@@ -46,7 +65,8 @@
         <img src="images/i5.png" data-full="images/crossiant.png" alt="Creamy Pasta" onclick="openModal(this)" />
         <div class="card-content">
           <h3>Croissant: France 🇫🇷</h3>
-          <p>Flaky, buttery pastry with layers of delight — perfect with coffee and straight from the streets of Paris.</p>
+          <p>Flaky, buttery pastry with layers of delight — perfect with coffee and straight from the streets of Paris.
+          </p>
         </div>
       </div>
 
@@ -74,6 +94,10 @@
     <img class="modal-content" id="modalImage" />
   </div>
 
+  <footer class="footer">
+    Crafted with ❤️ by <strong>Aryan</strong>, <strong>Bhavya</strong>, and <strong>Chinmay</strong>
+  </footer>
+
   <script>
     function openModal(img) {
       const modal = document.getElementById("imageModal");
@@ -86,6 +110,11 @@
     function closeModal() {
       document.getElementById("imageModal").style.display = "none";
     }
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
   </script>
 </body>
+
 </html>
