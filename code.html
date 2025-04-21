@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        .collapsible-content {
+            display: none;
+        }
+
+        .collapsible-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Food Journal</a></li>
+            <li><a href="PhotoGraphicEssay.html">Photographic Essay</a></li>
+            <li><a href="documentary.html">Documentary</a></li>
+            <li><a href="code.html">Code</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>HTML Code</h1><button class="collapsible-button" onclick="toggleCode(this)">Show Code</button>
+        <pre><code class="language-html collapsible-content">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Image Grid Collage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div style="display: flex; flex-wrap: wrap; width: 100%;"&gt;
+    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
+        &lt;img src="images/c1.jpg" alt="Image 1" style="width: 100%; height: auto;"&gt;
+        &lt;p style="text-align: center;"&gt;Caption for Image 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
+        &lt;img src="images/c2.jpg" alt="Image 2" style="width: 100%; height: auto;"&gt;
+        &lt;p style="text-align: center;"&gt;Caption for Image 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
+        &lt;img src="images/c3.jpg" alt="Image 3" style="width: 100%; height: auto;"&gt;
+        &lt;p style="text-align: center;"&gt;Caption for Image 3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
+        &lt;img src="images/c4.jpg" alt="Image 4" style="width: 100%; height: auto;"&gt;
+        &lt;p style="text-align: center;"&gt;Caption for Image 4&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
+        &lt;img src="images/c5.jpg" alt="Image 5" style="width: 100%; height: auto;"&gt;
+        &lt;p style="text-align: center;"&gt;Caption for Image 5&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
+        &lt;img src="images/c6.jpg" alt="Image 6" style="width: 100%; height: auto;"&gt;
+        &lt;p style="text-align: center;"&gt;Caption for Image 6&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="width: 50%; padding: 10px; box-sizing: border-box;"&gt;
+        &lt;img src="images/c7.jpg" alt="Image 7" style="width: 100%; height: auto;"&gt;
+        &lt;p style="text-align: center;"&gt;Caption for Image 7&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h1>CSS Code</h1><button class="collapsible-button" onclick="toggleCode(this)">Show Code</button>
+        <pre><code class="language-css collapsible-content">/* Add your CSS code here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Add more CSS as needed */</code></pre>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+
+        function toggleCode(button) {
+            var pre = button.nextElementSibling;
+            var code = pre.querySelector('.collapsible-content');
+            code.style.display = code.style.display === "block" ? "none" : "block";
+            button.textContent = code.style.display === "block" ? "Hide Code" : "Show Code";
+        }
+
+        // Initially hide all code blocks
+        document.querySelectorAll('.collapsible-content').forEach(code => code.style.display = 'none');
+    </script>
+</body>
+
+</html>
